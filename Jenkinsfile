@@ -14,6 +14,7 @@ pipeline {
         stage ('Test'){
             steps{
                 echo 'Running regressition test'
+                sh 'duncle exec cucumber -p ci'
             }
         }
         stage ('UAT'){
